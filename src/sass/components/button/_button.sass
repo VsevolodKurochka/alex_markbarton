@@ -11,7 +11,8 @@
 	border: none
 	border-radius: 0
 	
-	+font('b')
+	+font('pb')
+	text-transform: uppercase
 	text-decoration: none
 	line-height: 1.4
 	
@@ -26,7 +27,8 @@
 	@extend %btn-placeholder
 
 	&_lg
-			+btn-size($btn-large-padding, $btn-large-size)
+		border-radius: 30px
+		+btn-size($btn-large-padding, $btn-large-size)
 
 	&_shadow
 		&-brand-1

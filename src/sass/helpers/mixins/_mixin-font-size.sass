@@ -1,8 +1,15 @@
 =font($font)
-	@if $font == 'l'
+	@if $font == 'pl'
 		font-family: 'Proxima Nova Light'
-	@elseif $font = 'b'
+
+	@elseif $font == 'pb'
 		font-family: 'Proxima Nova Bold'
+
+	@elseif $font == 'cb'
+		font-family: 'Caveat Bold'
+
+	@elseif $font == 'cr'
+		font-family: 'Caveat Regular'
 
 /// Get font-size from map
 /// @access public

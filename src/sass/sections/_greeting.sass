@@ -6,23 +6,131 @@
 	color: $color-white
 	
 	+min(sm)
-		+padding-y(250px)
+		+padding-y(200px, 180px)
 
-	&__title
-
-		&-first
-			display: block
+	@at-root
+		%relative
 			+relative()
 
-			color: $color-brand-1
-			
+		%db
+			display: block
+
+		%font-bold
+			+font('pb')
 
 	&__bg
 		+absolute(0, 0)
 
 		+min(sm)
-			+size(50%, 90%)
+			+size(45%, 90%)
 
 		img
 			object-fit: cover
 			+size(100%)
+
+	&__first-letter
+		line-height: 1
+		color: $color-brand-1
+		@extend %db, %relative, %font-bold
+
+		&:before
+			content: ""
+			+absolute(0, null, null, 0)
+			+size(50px, 30px)
+			+bg('../img/queen.png')
+
+		+min(sm)
+			margin-bottom: -70px
+			font-size: 187px
+
+			&:before
+				top: -35px
+				+size(126px, 78px)
+
+	&__content
+
+		@extend %relative
+
+		left: 30px
+
+		+min(sm)
+			left: 95px
+
+
+	&__title
+		margin-bottom: 25px
+		line-height: 1
+
+		&-first
+			@extend %db, %font-bold
+
+			color: $color-white
+
+			+min(sm)
+				font-size: 93px
+
+		&-last
+			@extend %db
+			color: $color-brand-1
+			+font('l')
+
+			+min(sm)
+				font-size: 17px
+
+	&__subtitle
+		+relative()
+		padding-bottom: 20px
+		margin-bottom: 20px
+
+		+font('cr')
+		font-weight: normal
+		line-height: 1.1
+
+		&:before
+			content: ""
+			+absolute(null, null, 0, 0)
+			+size(200px, 1px)
+			background-color: transparentize($color-white, 0.8)
+
+
+		&-highlight
+
+			+relative()
+			display: inline-block
+			z-index: 1
+			
+
+			+font('cb')
+
+			&:before
+				content: ""
+				+absolute(null, null, 5px, 0)
+				+size(100%, 3px)
+				background-color: $color-brand-1
+				z-index: -1
+
+				+min(sm)
+					height: 7px
+
+		+min(sm)
+			font-size: 42px
+
+	&__warning
+
+		margin-bottom: 15px
+
+	&__highlight
+		font-size: 20px
+		line-height: 1.1
+		color: $color-brand-2
+		+font('pb')
+
+		+min(sm)
+			font-size: 24px
+
+	&__button-outer
+
+		margin-top: 30px
+
+		+min(sm)
+			margin-top: 50px

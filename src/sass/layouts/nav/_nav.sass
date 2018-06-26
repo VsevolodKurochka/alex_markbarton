@@ -1,4 +1,6 @@
 +b('nav')
+	+transition()
+		
 	+e('row')
 		justify-content: space-between
 		align-items: center
@@ -20,4 +22,8 @@
 			flex-basis: 100%
 
 	+min(md)
-		padding: 25px 0
+		padding: 15px 0
+
+		&_scrolled
+
+			background-color: $color-black
