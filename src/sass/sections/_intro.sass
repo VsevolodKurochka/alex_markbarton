@@ -1,0 +1,109 @@
+.intro
+	+relative()
+	+padding-y(45px, 60px)
+	background-color: $color-brand-3
+	
+
+	z-index: 2
+
+	+min(md)
+		+padding-y(90px, 140px)
+
+	&:before
+		content: ""
+		+absolute(-25px, null, null, 0)
+		+size(30%, 100%)
+		background-color: $color-brand-2
+
+	&__image
+		font-size: 0
+
+		+max(sm)
+			margin-bottom: 15px
+
+	&__who
+		+relative(null, null, null, -15px)
+		margin-bottom: 15px
+		padding: 15px
+		background-color: $color-brand-3
+		
+		font-size: 17px
+		line-height: 1
+
+		+min(md)
+			+absolute(null, 15px, 0)
+			padding-left: 0 0 0 150px
+
+			&:before
+				content: ""
+				+absolute(null, null, 0, -50px)
+				+size(150px, 1px)
+				background-color: $color-black
+
+
+	&__content
+
+		+min(md)
+			margin-left: -99px
+
+	&__quote
+		+relative()
+		padding: 30px 15px
+		background-color: $color-white
+		overflow: hidden
+		z-index: 1
+
+		+min(sm)
+			top: 60px
+			padding: 45px 20px
+
+		+min(lg)
+			top: 75px
+			padding: 70px
+
+		&:before,
+		&:after
+			content: ""
+			+absolute()
+			z-index: -1
+
+			line-height: 1
+			color: $color-brand-3
+			+font('pb')
+			+bg('../img/icon-quote.png')
+
+			+min(md)
+				+size(253px, 183px)
+
+		&:before
+			left: 30px
+			top: -50px
+
+			+min(md)
+				top: -75px
+
+		&:after
+			right: 30px
+			bottom: -50px
+			transform: scale(-1, -1)
+
+			+min(md)
+				bottom: -75px
+
+		&-title
+			margin-bottom: 20px
+			line-height: 1.2
+			color: $color-brand-2
+			+font('pb')
+
+			+min(sm)
+				font-size: 25px
+
+			+min(md)
+				font-size: 30px
+
+		&-content
+			+min(md)
+				font-size: 20px
+			p:not(:last-child)
+				margin-bottom: 15px
