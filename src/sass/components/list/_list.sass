@@ -2,7 +2,13 @@
   list-style: none
 
   li
-    position: relative
+    +relative()
 
     &:after
-      +pseudo
+      content: ""
+      +absolute()
+
+    strong
+    	display: block
+    	margin-bottom: 15px
+    	font-size: 130%

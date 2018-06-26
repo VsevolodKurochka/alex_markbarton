@@ -26,13 +26,16 @@
 		margin-bottom: 15px
 		padding: 15px
 		background-color: $color-brand-3
-		
+
 		font-size: 17px
 		line-height: 1
 
 		+min(md)
-			+absolute(null, 15px, 0)
-			padding-left: 0 0 0 150px
+			+absolute(null, 15px, 0, auto)
+			margin-bottom: 0
+			
+			background-color: transparent
+			padding: 0 0 0 150px
 
 			&:before
 				content: ""

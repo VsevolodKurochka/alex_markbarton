@@ -1,9 +1,16 @@
-+b("list")
-	+m('cancel')
+.list
+	&_line
 		li
-			padding-left: 30px
+			padding-left: 45px
 
 			&:after
-				top: 0
+				top: 15px
 				left: 0
-				+size(37px)
+				+size(30px, 1px)
+				background-color: $color-brand-1
+
+			+min(md)
+				padding-left: 75px
+
+				&:after
+					width: 60px
