@@ -1,0 +1,22 @@
++b.fixed
+	+b.nav#js-navigation
+		+e.container.container
+			+e.row.row
+				+e.logo.col-8.col-md-3
+					+hamburger('2')
+					+e.logo-content
+						+e.logo-content-img(src="img/logo.png" alt="")
+				+e.NAV.menu.col-12.col-md-6#js-navigation-menu
+					for item in navigation
+						+e.LI.menu-item
+							+e.A.menu-item-link(data-scroll href=item.link)=item.name
+					//- +e.LI.menu-item
+						+b.BUTTON.btn._nav(data-action="modal" data-open="#modal-form") Button
+				+e.addition.col-4.col-md-3#js-nav-addition
+					+e.addition-toggle#js-nav-toggle
+						span
+						span
+						span
+					+e.addition-links.js-nav-links
+						+e.A.addition-link +99 999 999 99
+						+e.A.addition-link._hidden +99 999 999 99

@@ -1,0 +1,36 @@
+mixin css(src)
+	link(href=src rel="stylesheet")
+
+mixin js(src)
+	script(src=src)
+
+mixin add-meta(title, description, url, image)
+	if title
+		title=title
+		meta(property="og:title" content=title)
+	if description
+		meta(itemprop="description" content=description)
+		meta(property="og:description" content=description)
+	if url
+		meta(property="og:url" content=url)
+		meta(property="og:type" content="website")
+	if image
+		meta(property="og:image" content=image)
+		meta(property="og:image:type" content="image/jpeg")
+		meta(property="og:image:width" content="1000")
+		meta(property="og:image:height" content="330")
+
+mixin hamburger(type)
+	if type == '1'
+		+b.hamburger._effect-1(type="button" id="js-nav-hamburger")
+			+e.SPAN.lines
+				span Line1
+				span Line2
+				span Line3
+	else if type == '2'
+		+b.hamburger._effect-2(type="button" id="js-nav-hamburger")
+			+e.SPAN.lines
+				span
+				span
+				span
+				span
