@@ -1,4 +1,28 @@
 .greeting
+	+relative()
+	+padding-y(75px)
+
 	background-color: #101a20
 	color: $color-white
-	+padding-y(130px)
+	
+	+min(sm)
+		+padding-y(250px)
+
+	&__title
+
+		&-first
+			display: block
+			+relative()
+
+			color: $color-brand-1
+			
+
+	&__bg
+		+absolute(0, 0)
+
+		+min(sm)
+			+size(50%, 90%)
+
+		img
+			object-fit: cover
+			+size(100%)
