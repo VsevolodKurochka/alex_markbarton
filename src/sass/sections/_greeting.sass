@@ -1,16 +1,13 @@
 .greeting
 	+relative()
 	z-index: 1
-	+padding-y(75px)
+	+padding-y(50px, 75px)
 
 	background-color: #101a20
 	color: $color-white
 	
 	+min(sm)
-		+padding-y(130px, 180px)
-
-	+min(md)
-		padding-top: 200px
+		+padding-y(160px, 180px)
 
 	@at-root
 		%relative
@@ -33,7 +30,7 @@
 				content: ""
 				+absolute(0, null, null, 0)
 				+size(100%)
-				background-color: transparentize($color-black, 0.5)
+				background-color: transparentize($color-black, 0.3)
 
 		+min(sm)
 			+size(45%, 90%)
@@ -52,8 +49,8 @@
 
 		&:before
 			content: ""
-			+absolute(-35px, null, null, 0)
-			+size(50px, 30px)
+			+absolute(-20px, null, null, 0)
+			+size(68px, 42px)
 			+bg('../img/queen.png')
 
 		+min(sm)
@@ -168,6 +165,7 @@
 		margin-bottom: 15px
 
 	&__highlight
+		margin-bottom: 30px
 		font-size: 20px
 		line-height: 1.1
 		color: $color-brand-2
@@ -178,6 +176,61 @@
 
 		+min(md)
 			font-size: 24px
+
+	&__course
+		max-width: 300px
+		color: $color-white
+
+		+min(md)
+			+absolute(null, 0, null, null)
+			max-width: 350px
+
+		@at-root
+			%bg
+				background-color: $color-brand-2
+
+		&-header
+			padding: 15px
+			@extend %bg
+
+			&-icon,
+			&-title
+				vertical-align: middle
+
+			&-title
+				font-size: 17px
+				padding-left: 45px
+
+		&-content
+			padding-left: 55px
+
+			&-body
+				display: flex
+				@extend %bg
+
+				&-item
+					flex-basis: 50%
+					text-align: center
+
+					+padding-y(45px)
+
+					&_divider
+						+relative()
+
+						&:before
+							content: ""
+							+absolute(15px, 0)
+							+size(1px, 100%)
+							background-color: $color-white
+
+					&-title
+						+font('pb')
+						font-size: 60px
+						line-height: 1
+
+					&-subtitle
+						font-size: 24px
+						line-height: 1
 
 	&__button-outer
 
