@@ -3,11 +3,25 @@
 	+e("addition")
 		+relative
 
+		+max(md)
+			text-align: right
+			height: 100%
+			padding-right: 0
+
 		+ee("btn")
 
-			border-radius: 20px
-			font-size: 16px
+			border-radius: 0
+			font-size: 12px
+			background-color: $color-brand-2
+			color: $color-white
+
+			+max(md)
+				height: 100%
+				padding: 10px
 
 			+min(md)
+				border-radius: 20px
 				background-color: #fff
+
+				font-size: 16px
 				color: $color-brand-1
