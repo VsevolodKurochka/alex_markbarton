@@ -30,6 +30,9 @@
 		border-radius: 30px
 		+btn-size($btn-large-padding, $btn-large-size)
 
+		+min(sm)
+			+btn-size($btn-large-sm-padding, $btn-large-sm-size)
+
 	&_shadow
 		&-brand-1
 			box-shadow: 0 3px 8px 1px transparentize($color-brand-1, 0.5)

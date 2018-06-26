@@ -1,12 +1,16 @@
 .greeting
 	+relative()
+	z-index: 1
 	+padding-y(75px)
 
 	background-color: #101a20
 	color: $color-white
 	
 	+min(sm)
-		+padding-y(200px, 180px)
+		+padding-y(130px, 180px)
+
+	+min(md)
+		padding-top: 200px
 
 	@at-root
 		%relative
@@ -20,6 +24,16 @@
 
 	&__bg
 		+absolute(0, 0)
+		+size(100%)
+		z-index: -1
+
+		+max(sm)
+
+			&:before
+				content: ""
+				+absolute(0, null, null, 0)
+				+size(100%)
+				background-color: transparentize($color-black, 0.5)
 
 		+min(sm)
 			+size(45%, 90%)
@@ -29,31 +43,53 @@
 			+size(100%)
 
 	&__first-letter
+		margin-bottom: -35px
+
+		font-size: 100px
 		line-height: 1
 		color: $color-brand-1
 		@extend %db, %relative, %font-bold
 
 		&:before
 			content: ""
-			+absolute(0, null, null, 0)
+			+absolute(-35px, null, null, 0)
 			+size(50px, 30px)
 			+bg('../img/queen.png')
 
 		+min(sm)
+			margin-bottom: -55px
+			font-size: 130px
+
+			&:before
+				top: -35px
+				+size(99px, 62px)
+
+		+min(md)
+			font-size: 160px
+
+			&:before
+				+size(110px, 69px)
+
+		+min(lg)
 			margin-bottom: -70px
 			font-size: 187px
 
 			&:before
-				top: -35px
 				+size(126px, 78px)
 
 	&__content
 
 		@extend %relative
 
-		left: 30px
+		left: 45px
 
 		+min(sm)
+			left: 55px
+		
+		+min(md)
+			left: 75px
+
+		+min(lg)
 			left: 95px
 
 
@@ -63,19 +99,24 @@
 
 		&-first
 			@extend %db, %font-bold
-
+			
+			font-size: 45px
 			color: $color-white
 
 			+min(sm)
+				font-size: 60px
+
+			+min(md)
+				font-size: 80px
+
+			+min(lg)
 				font-size: 93px
 
 		&-last
 			@extend %db
+			font-size: 17px
 			color: $color-brand-1
 			+font('l')
-
-			+min(sm)
-				font-size: 17px
 
 	&__subtitle
 		+relative()
@@ -83,6 +124,7 @@
 		margin-bottom: 20px
 
 		+font('cr')
+		font-size: 25px
 		font-weight: normal
 		line-height: 1.1
 
@@ -91,6 +133,15 @@
 			+absolute(null, null, 0, 0)
 			+size(200px, 1px)
 			background-color: transparentize($color-white, 0.8)
+
+		+min(sm)
+			font-size: 30px
+
+		+min(md)
+			font-size: 35px
+
+		+min(lg)
+			font-size: 42px
 
 
 		&-highlight
@@ -112,9 +163,6 @@
 				+min(sm)
 					height: 7px
 
-		+min(sm)
-			font-size: 42px
-
 	&__warning
 
 		margin-bottom: 15px
@@ -126,6 +174,9 @@
 		+font('pb')
 
 		+min(sm)
+			font-size: 22px
+
+		+min(md)
 			font-size: 24px
 
 	&__button-outer
