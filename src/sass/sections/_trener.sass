@@ -1,0 +1,49 @@
+.trener
+	background-color: $color-brand-3
+	&__header
+		background-color: $color-white
+		+padding-y(45px, 90px)
+
+		+min(sm)
+			+padding-y(60px, 150px)
+
+		+min(md)
+			+padding-y(90px, 180px)
+
+	&__row
+
+		+min(sm)
+			justify-content: space-around
+
+	&__image
+		+relative()
+		z-index: 1
+
+		+min(sm)
+			margin-top: -150px
+
+		&:before
+			content: ""
+			+absolute(-30px, null, null, 30px)
+			+size(100%)
+			border: 5px solid $color-brand-2
+			z-index: -1
+
+			+min(md)
+				border-width: 15px
+
+	&__name
+		+font('pb')
+		font-size: 25px
+		margin-bottom: 30px
+
+		+min(md)
+
+			font-size: 30px
+			margin-left: -30px
+			margin-bottom: 45px
+
+	&__description
+		margin-bottom: 30px
+		+font('pb')
+		color: $color-brand-2
