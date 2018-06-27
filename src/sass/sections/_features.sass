@@ -1,0 +1,76 @@
+.features
+	+padding-y(45px)
+	background-color: $color-brand-3
+	overflow: hidden
+
+	+min(md)
+		+padding-y(90px)
+
+	&__part
+		
+		&_1
+
+			margin-bottom: 45px
+
+			+min(sm)
+				margin-bottom: 130px
+
+		&_2
+			margin-bottom: 45px
+
+			+min(sm)
+				margin-bottom: 60px
+
+	&__row
+
+		+relative()
+		z-index: 1
+		
+		&:after,
+		&:before
+			content: ""
+			+absolute()
+
+		&:after
+			top: 30px
+			left: -30%
+			background-color: $color-white
+			+size(130%, 100%)
+			z-index: -1
+
+		&:before
+			bottom: -25%
+			left: 5%
+			+size(100%, 50%)
+			background-color: $color-brand-2
+			z-index: -2
+
+	&__item
+
+		&-title
+			+relative()
+			padding-bottom: 45px
+			margin-bottom: 30px
+			font-size: 30px
+			color: $color-brand-1
+			+font('pb')
+
+			&:before
+				content: ""
+				+absolute(null, null, 0, 0)
+				+size(20px, 27px)
+				+bg('../img/feature-arrow.png')
+
+		&-content
+			font-size: 20px
+
+	&__footer
+
+		&-text
+
+			+min(sm)
+				margin: 30px auto 0 auto
+				width: 80%
+
+			+min(md)
+				width: 70%

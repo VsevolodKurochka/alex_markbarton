@@ -1,0 +1,51 @@
+.meet
+
+	+relative()
+
+	&:before
+		content: ""
+		+absolute(50%, 0)
+		transform: translateY(-50%)
+		+size(50%, 30%)
+		background-color: $color-brand-3
+
+	&__row
+
+		margin-bottom: 30px
+
+		+min(sm)
+			margin-bottom: 60px
+			align-items: center
+
+		+min(md)
+			margin-bottom: 90px
+
+	&__name
+		font-size: 23px
+		margin-bottom: 15px
+
+		+min(md)
+			font-size: 25px
+
+		+min(lg)
+			font-size: 30px
+
+	&__about
+		display: inline-block
+		margin-bottom: 15px
+		padding: 5px 30px
+		background-color: $color-brand-2
+		color: $color-white
+		font-size: 20px
+
+		+min(lg)
+			font-size: 22px
+			padding-left: 75px
+			margin-left: -75px
+
+	&__content
+		p:not(:last-child)
+			margin-bottom: 15px
+
+	&__footer
+		text-align: center

@@ -1,0 +1,61 @@
+.video
+	font-size: 0
+	+relative()
+
+	&:before
+		content: ""
+		+absolute(0, null, null, 0)
+		+size(100%)
+		background-color: transparentize($color-general, 0.2)
+
+	&__image
+		width: 100%
+
+	&__button
+		+absolute(50%, null, null, 50%)
+		transform: translate(-50%, -50%)
+		background-color: transparent
+		border: none
+		outline: none
+
+		&-circle
+			+relative()
+			display: inline-block
+
+			+size(95px)
+			margin-bottom: 15px
+			
+			border-radius: 100%
+			border: 8px solid $color-white
+
+			+transition()
+
+			&:before
+				content: ""
+				+absolute(25px, null, null, 30px)
+
+				+size(0)
+				border-style: solid
+				border-width: 15px 0 15px 26.0px
+				border-color: transparent transparent transparent $color-white
+
+				+transition
+
+		&-text
+			font-size: 12px
+			+font('pl')
+			
+			color: $color-white
+
+			+transition()
+
+		&:hover &
+
+			&-circle
+				border-color: $color-brand-1
+
+				&:before
+					border-left-color: $color-brand-1
+
+			&-text
+				color: $color-brand-1

@@ -1,0 +1,20 @@
++b.SECTION.meet.section
+	.container
+		.section__header
+			h3.section__title Тогда давай знакомиться
+		+e.row.row
+			.col-12.col-sm-5.col-md-4
+				+e.P.name Меня зовут 
+					strong Марк Бартон
+				+e.P.about Я психолог, телеведущий. 
+				+e.content
+					p Постоянный эксперт: "Первый Канал", "Россия 1", "Ю" - проекты "Беременный Папа", "Папочка и Мамочки", "СПАС", "ТВЦ".
+					p Постоянный член European Institute of Christian Psychology.
+			.col-12.col-sm-7.col-md-8
+				+b.video
+					+e.IMG.image(src="img/meet-mark.jpg")
+					+e.BUTTON.button
+						+e.SPAN.button-circle
+						+e.P.button-text посмотреть видео
+		+e.footer
+			+b.BUTTON.btn._lg._brand-1.effect._bounce-bottom(data-action="modal" data-open="#modal-form") Запустить качественные перемены в своей жизни

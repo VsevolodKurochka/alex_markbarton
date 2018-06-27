@@ -1,0 +1,77 @@
+.sphere
+	padding-top: 45px
+	background-color: $color-general
+	
+	+min(sm)
+		padding-top: 60px
+
+	+min(md)
+		padding-top: 70px
+
+	&__title
+		color: $color-white
+
+	&__content
+		+min(sm)
+			justify-content: center
+
+	&__item
+		height: 200px
+		margin-bottom: 30px
+
+		+relative()
+
+		+min(sm)
+			margin-bottom: 0
+			height: 250px
+			width: 50%
+
+		+min(md)
+			width: 20%
+			height: 320px
+
+		+min(lg)
+			height: 385px
+
+		&-image
+			+size(100%)
+			object-fit: cover
+			opacity: 0.2
+
+			+transition()
+		
+		&:hover &-image,
+		&_active &-image
+			opacity: 1
+
+		&-content
+			+absolute(null, null, 0, 0)
+			padding: 5px 10px
+			width: 100%
+			background-color: $color-brand-2
+			color: $color-white
+			
+			font-size: 19px
+			line-height: 1.1
+
+			+font('pb')
+
+			+transition()
+
+			+min(md)
+				width: auto
+				bottom: -10px
+				left: 10px
+				min-width: 140px
+				min-height: 55px
+				font-size: 18px
+
+			+min(lg)
+				min-width: 190px
+				min-height: 62px
+				font-size: 20px
+
+		&:hover &-content,
+		&_active &-content
+			background-color: $color-general
+			color: $color-brand-2
