@@ -1,0 +1,124 @@
+.variant
+
+	padding-bottom: 30px
+
+	&__content
+		+relative()
+		z-index: 1
+
+		&:before
+			content: ""
+			+absolute(10px, null, null, -30%)
+			+size(125%, 30%)
+			z-index: -1
+			background-color: $color-brand-3
+
+	&__item
+
+		+max(sm)
+			&:not(:last-child)
+				margin-bottom: 45px
+
+		text-align: center
+
+		&_vip
+			color: $color-white
+
+		&-inner
+			z-index: 1
+			+relative()
+			+padding-y(30px)
+
+		&-image
+			width: 100%
+			height: auto
+			+absolute(0, null, null, 0)
+			z-index: -1
+
+		&-title
+			margin-bottom: 30px
+			line-height: 1
+			font-size: 30px
+			color: $color-general
+			+font('pb')
+
+			+min(md)
+				margin-bottom: 45px
+				font-size: 45px
+
+			+min(lg)
+				font-size: 50px
+
+		&-subtitle
+			margin-bottom: 30px
+
+			line-height: 1.2
+			font-size: 22px
+			+font('pb')
+			
+			+min(md)
+				margin-bottom: 45px
+				font-size: 25px
+			+min(lg)
+				margin-bottom: 60px
+				font-size: 30px
+
+		&-list
+			font-size: 16px
+			margin-bottom: 30px
+
+			li
+				&:nth-child(odd)
+					+font('pb')
+				&:not(:last-child)
+					margin-bottom: 15px
+
+		&-price
+
+			&-old
+				line-height: 1
+				margin-bottom: 10px
+				text-decoration: line-through
+				
+				font-size: 25px
+			
+				+min(md)
+					font-size: 20px
+
+				+min(lg)
+					font-size: 34px
+
+			&-new
+				line-height: 1
+				color: $color-brand-1
+				background-color: $color-white
+				font-size: 36px
+				+font('pb')
+			
+				+min(md)
+					font-size: 43px
+
+				+min(lg)
+					font-size: 48px
+
+		&-footer
+			margin-top: 45px
+			margin-bottom: -55px
+
+		&-btn
+
+			+min(sm)
+				min-width: 60%
+
+		&_vip &
+			&-inner
+				background-color: $color-brand-2
+			&-list
+				+min(md)
+					margin-bottom: 30px
+					font-size: 19px
+			&-title
+				display: inline-block
+				background-color: $color-white
+				padding: 40px 26px
+				border-radius: 100%
