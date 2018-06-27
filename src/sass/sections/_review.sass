@@ -1,0 +1,96 @@
+.review
+	background-color: $color-brand-3
+
+	+padding-y(45px)
+
+	+min(md)
+		+padding-y(90px)
+
+	&__item
+		padding: 15px
+		background-color: $color-white
+
+		&-header
+			font-size: 0
+			margin-bottom: 20px
+
+			+min(sm)
+				display: flex
+				align-items: flex-end
+
+			&-image-outer
+				display: inline-block
+				+size(140px)
+
+				+min(sm)
+					margin-right: 10px
+
+				img
+					+size(100%)
+					object-fit: cover
+
+		&-name
+			+font('pb')
+			font-size: 21px
+			line-height: 1.1
+			margin-bottom: 5px
+
+		&-info
+			font-size: 17px
+			color: #d2d2d2
+
+		&-content
+			line-height: 1.2
+			font-size: 17px
+			height: 84px
+			overflow: hidden
+			margin-bottom: 20px
+			+transition()
+
+		&-link
+			border: none
+			background-color: transparent
+			display: inline-block
+			+font('pb')
+			font-size: 17px
+			color: $color-brand-2
+			border-bottom: 1px solid $color-brand-2
+			outline: none
+
+			+transition()
+
+			&:hover
+				color: $color-brand-1
+				border-bottom-color: $color-brand-1
+	&__nav
+		margin-top: 45px
+		text-align: center
+
+		button
+			+relative()
+			display: inline-block
+			vertical-align: middle
+			+size(50px)
+			background-color: transparent
+			border: 2px solid $color-brand-2
+			line-height: 1
+			z-index: 1
+
+			+transition()
+
+			&:hover
+				border-color: $color-brand-1
+				z-index: 2
+
+			&:before
+				content: ""
+				+absolute(50%, null, null, 50%)
+				+size(27px, 20px)
+				margin-top: -10px
+				margin-left: -13.5px
+				+bg('../img/review-nav.png')
+
+			&.owl-next
+				margin-left: -2px
+				&:before
+					transform: scaleX(-1)
