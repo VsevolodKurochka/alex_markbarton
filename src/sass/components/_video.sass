@@ -11,6 +11,13 @@
 	&__image
 		width: 100%
 
+	+max(sm)
+		height: 300px
+
+		&__image
+			height: 100%
+			object-fit: cover
+
 	&__button
 		+absolute(50%, null, null, 50%)
 		transform: translate(-50%, -50%)

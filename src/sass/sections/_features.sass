@@ -39,19 +39,26 @@
 			z-index: -1
 
 		&:before
-			bottom: -25%
+			bottom: 47%
 			left: 5%
 			+size(100%, 50%)
 			background-color: $color-brand-2
 			z-index: -2
 
+			+min(sm)
+				bottom: -25%
+
 	&__item
+
+		+max(sm)
+			+offset()
 
 		&-title
 			+relative()
 			padding-bottom: 45px
 			margin-bottom: 30px
 			font-size: 30px
+			line-height: 1.1
 			color: $color-brand-1
 			+font('pb')
 
@@ -67,8 +74,11 @@
 	&__footer
 
 		&-text
+			margin-top: 15px
+			font-size: 14px
 
 			+min(sm)
+				font-size: 17px
 				margin: 30px auto 0 auto
 				width: 80%
 

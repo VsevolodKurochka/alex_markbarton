@@ -1,4 +1,5 @@
 .trener
+	overflow: hidden
 	padding-bottom: 45px
 	background-color: $color-brand-3
 	&__header
@@ -19,7 +20,8 @@
 	&__image
 		+relative()
 		z-index: 1
-		margin-bottom: 30px
+		margin-top: -60px
+		margin-bottom: 15px
 
 		+min(sm)
 			margin-top: -150px
@@ -37,7 +39,10 @@
 	&__name
 		+font('pb')
 		font-size: 25px
-		margin-bottom: 30px
+		margin-bottom: 10px
+
+		+min(sm)
+			margin-bottom: 30px
 
 		+min(md)
 

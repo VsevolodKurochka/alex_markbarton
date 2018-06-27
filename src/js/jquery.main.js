@@ -15,13 +15,18 @@ $(document).ready(function(){
     loop: true,
     margin: 10,
     nav: false,
-    items: 2,
+    items: 1,
     dots: false,
     nav: true,
     navText: ["", ""],
     autoplay: false,
     autoplayTimeout: 3000,
-    navContainerClass: 'owl-nav review__nav'
+    navContainerClass: 'owl-nav review__nav',
+    responsive: {
+    	768: {
+    		items: 2
+    	}
+    }
 	});
 
 	$(".review__item-link").click(function(){

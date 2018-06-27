@@ -181,6 +181,9 @@
 		max-width: 300px
 		color: $color-white
 
+		+max(sm)
+			margin-left: -45px
+
 		+min(md)
 			+absolute(null, 0, null, null)
 			max-width: 350px
@@ -198,8 +201,12 @@
 				vertical-align: middle
 
 			&-title
-				font-size: 17px
-				padding-left: 45px
+				font-size: 15px
+				padding-left: 15px
+
+				+min(sm)
+					font-size: 17px
+					padding-left: 45px
 
 		&-content
 			padding-left: 55px

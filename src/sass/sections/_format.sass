@@ -26,7 +26,7 @@
 
 	&__item
 
-		margin-bottom: 45px
+		+offset(45px)
 
 		&_offset
 
@@ -52,7 +52,7 @@
 		&-title
 			margin-bottom: 30px
 			text-align: center
-			+font('bl')
+			+font('pb')
 
 			+min(sm)
 				font-size: 25px
@@ -64,6 +64,9 @@
 		+relative()
 		text-align: center
 
+		+max(sm)
+			+offset()
+
 		+min(sm)
 			&:not(:last-child):before
 				content: ""
@@ -72,10 +75,14 @@
 				background-color: transparentize($color-general, 0.9)
 
 		&-number
-			margin-bottom: 30px
+			margin-bottom: 10px
 			+font('pb')
 			font-size: 48px
+			line-height: 1
 			color: $color-brand-2
+			+min(md)
+				margin-bottom: 30px
 
 		&-content
-			font-size: 20px
+			+min(md)
+				font-size: 20px

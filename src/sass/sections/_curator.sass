@@ -12,6 +12,9 @@
 
 	&__item
 
+		+max(sm)
+			+offset()
+
 		&-header
 
 			+relative()
@@ -30,9 +33,15 @@
 
 			&:before
 				content: ""
-				+absolute(null, null, -25px, -45px)
-				+size(70px)
-				border: 15px solid $color-brand-1
+				+absolute(null, null, -25px, -10px)
+				+size(50px)
+				border: 10px solid $color-brand-1
+
+				+min(sm)
+					bottom: -25px
+					left: -45px
+					+size(70px)
+					border-width: 15px
 
 		&-image
 			+size(100%)
