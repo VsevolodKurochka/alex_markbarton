@@ -1,50 +1,46 @@
 .sphere
-	padding-top: 45px
-	background-color: $color-general
-	
-	+min(sm)
-		padding-top: 60px
-
-	+min(md)
-		padding-top: 70px
-
-	&__title
-		color: $color-white
-
+	overflow: hidden
 	&__content
+		+relative()
+		z-index: 1
+		&:before
+			content: ""
+			+absolute(45px, null, null, -10%)
+			+size(120%, 100%)
+			background-color: $color-brand-2
+			
+			z-index: -1
 		+min(sm)
 			justify-content: center
 
 	&__item
-		height: 200px
-		margin-bottom: 30px
+		margin: 0 auto 30px
 
 		+relative()
 
-		+min(sm)
-			margin-bottom: 0
-			height: 250px
-			width: 50%
-
 		+min(md)
-			width: 20%
+			max-width: 280px
+
+		&-header
+			height: 250px
+
+			+min(md)
+				height: 280px
 
 		&-image
 			+size(100%)
 			object-fit: cover
-			opacity: 0.2
+			filter: grayscale(1)
 
 			+transition()
 		
 		&:hover &-image,
 		&_active &-image
-			opacity: 1
+			filter: grayscale(0)
 
 		&-content
-			+absolute(null, null, 0, 0)
 			padding: 5px 10px
 			width: 100%
-			background-color: $color-brand-2
 			color: $color-white
 			
 			font-size: 19px
@@ -56,8 +52,6 @@
 
 			+min(md)
 				width: auto
-				bottom: -10px
-				left: 10px
 				min-width: 140px
 				min-height: 55px
 				font-size: 18px
@@ -69,5 +63,4 @@
 
 		&:hover &-content,
 		&_active &-content
-			background-color: $color-general
-			color: $color-brand-2
+			color: $color-black
