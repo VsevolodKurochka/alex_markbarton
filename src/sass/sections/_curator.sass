@@ -1,0 +1,55 @@
+.curator
+	padding-top: 45px
+	border-top: 1px solid $color-brand-3
+	
+	+min(sm)
+		padding-top: 70px
+
+	&__content
+
+		+min(sm)
+			justify-content: space-between
+
+	&__item
+
+		&-header
+
+			+relative()
+			
+			margin-bottom: 35px
+			height: 200px
+
+			+min(sm)
+				height: 250px
+
+			+min(md)
+				height: 300px
+
+			+min(lg)
+				height: 350px
+
+			&:before
+				content: ""
+				+absolute(null, null, -25px, -45px)
+				+size(70px)
+				border: 15px solid $color-brand-1
+
+		&-image
+			+size(100%)
+			object-fit: cover
+
+		&-title
+			line-height: 1
+			margin-bottom: 10px
+			font-size: 20px
+			+font('pb')
+
+			+min(sm)
+				font-size: 22px
+
+			+min(md)
+				font-size: 25px
+
+		&-content
+			line-height: 1.2
+			font-size: 15px

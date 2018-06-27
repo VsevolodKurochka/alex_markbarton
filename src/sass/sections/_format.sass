@@ -1,0 +1,81 @@
+.format
+
+	overflow: hidden
+
+	&__content
+
+		+relative()
+		z-index: 1
+
+		margin-bottom: 45px
+
+		&:before
+			content: ""
+			z-index: -1
+			+absolute(null, -10%, 20%)
+			+size(90%, 70%)
+			background-color: $color-brand-3
+
+		+min(sm)
+			margin-bottom: 90px
+
+	&__row
+
+		+min(sm)
+			justify-content: flex-end
+
+	&__item
+
+		margin-bottom: 45px
+
+		&_offset
+
+			+min(sm)
+				margin-top: 30px
+
+		&-title
+			display: inline-block
+			margin-bottom: 15px
+			padding: 5px 30px
+			background-color: $color-brand-2
+			color: $color-white
+			font-size: 20px
+			+font('pb')
+
+			+min(lg)
+				font-size: 22px
+				padding-left: 75px
+				margin-left: -75px
+
+	&__steps
+
+		&-title
+			margin-bottom: 30px
+			text-align: center
+			+font('bl')
+
+			+min(sm)
+				font-size: 25px
+
+			+min(md)
+				font-size: 30px
+
+	&__step
+		+relative()
+		text-align: center
+
+		+min(sm)
+			&:not(:last-child):before
+				content: ""
+				+absolute(30px, -22%)
+				+size(180px, 1px)
+				background-color: transparentize($color-general, 0.9)
+
+		&-number
+			margin-bottom: 30px
+			+font('pb')
+			font-size: 48px
+			color: $color-brand-2
+
+		&-content
+			font-size: 20px
