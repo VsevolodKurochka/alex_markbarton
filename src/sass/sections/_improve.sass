@@ -1,0 +1,44 @@
+.improve
+
+	&__item
+
+		margin-bottom: 30px
+
+		+min(md)
+			margin-bottom: 60px
+
+		&-image
+			margin-bottom: 20px
+
+		&-content
+			+relative()
+
+			padding-left: 45px
+
+			&:before
+				content: ""
+				+absolute(15px, null, null, 0)
+				+size(30px, 1px)
+				background-color: $color-brand-1
+
+			+min(md)
+				padding-left: 70px
+
+				&:before
+					width: 50px
+
+		&-title
+			margin-bottom: 10px
+			font-size: 22px
+			+font('pb')
+
+		&-list
+
+			li
+				padding-left: 15px
+				&:after
+					content: "+"
+					top: 2px
+					left: 0
+					font-size: 17px
+					color: $color-brand-1
