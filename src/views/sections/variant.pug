@@ -1,0 +1,30 @@
++b.SECTION.variant.section
+	.container
+		.section__header
+			h3.section__title Выбери свой вариант участия в курсе
+		+e.content.row
+			+e.item.col-12.col-sm-6
+				+e.item-inner
+					+e.P.item-title Standart
+					+e.UL.list.list
+						li Основная программа курса: 30 ежедневных заданий
+						li Х вебинаров “Вопрос-Ответ” с Марком Бартоном
+						li Чат для общения, мотивации и поддержки
+						li Ежедневные домашние задания направленные на проработку всех сфер жизни
+						li Поддержку персонального куратора при возникновении вопросов с заданиями
+						li Бонусный набор мастер-классов и психологических практикумов Марка Бартона: "Психология судьбы", "Дочки матери. Проработка родительских отношений”, "Он и она. Любить правильно”, "Мотивируй и заряжай", "Я такая одна" и PROLOVE
+					+e.P.price-old 34 000 руб.
+					+e.P.price-new 22 000 руб.
+					+e.footer
+						+b.BUTTON.btn._lg._border-brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") пакет Standart
+			+e.item._vip.col-12.col-sm-6
+				+e.item-inner
+					+e.P.item-title VIP
+					+e.P.item-subtitle Всё что входит в пакет Standart + 
+					+e.UL.list.list
+						li Индивидуальное консультирование Марка Бартона - 3 консультации по 90 минут каждая
+						li Подписка на 3 вебинара Марка с годовым доступом к записи
+					+e.P.price-old 60 000 руб.
+					+e.P.price-new 40 000 руб.
+					+e.footer
+						+b.BUTTON.btn._lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") пакет VIP
