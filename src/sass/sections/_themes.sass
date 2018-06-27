@@ -1,0 +1,61 @@
+.themes
+	background-color: $color-general
+	+padding-y(45px)
+
+	+min(md)
+		+padding-y(90px)
+
+	&__title
+		color: $color-white
+
+	&__content
+		margin-bottom: 30px
+
+		+min(sm)
+			margin-bottom: 45px
+
+	&__part
+		padding: 30px 15px
+		flex-basis: 100%
+
+		+min(sm)
+			
+			flex-basis: 50%
+
+		+min(md)
+			padding: 30px 15px
+
+		+min(lg)
+			padding: 45px
+		
+		&-list
+			list-style: none
+			li
+				margin-bottom: 5px
+				padding: 3px 15px
+				font-size: 16px
+				
+				+min(md)
+					font-size: 20px
+
+		&_1
+			background-color: $color-white
+
+		&_1 &-list
+			li
+				&:nth-child(odd)
+					color: $color-white
+					background-color: $color-brand-2
+
+		&_2
+			background-color: $color-brand-2
+
+		&_2 &-list
+			li
+				color: $color-white
+				&:nth-child(odd)
+					color: $color-general
+					background-color: $color-white
+
+	&__footer
+		text-align: center
