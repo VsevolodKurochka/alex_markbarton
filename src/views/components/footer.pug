@@ -1,2 +1,19 @@
-+b.FOOTER.footer
-	+e.container.container
++b.modal#modal-form
+	+e.box._default
+		+e.header
+			+e.P.title Записаться на курс
+			+e.BUTTON.close(data-close="modal") &times;
+		+e.body
+			+b.FORM.form._block
+				+e.content
+					+e.row._line
+						+e.INPUT.control(name="vname" type="text" placeholder="Имя")
+						+e.SPAN.line
+					+e.row._line
+						+e.INPUT.control(name="vemail" type="email" placeholder="E-mail")
+						+e.SPAN.line
+					+e.row._line
+						+e.INPUT.control(name="vphone" type="phone" placeholder="Телефон")
+						+e.SPAN.line
+					+e.row.text-center
+						+e.BUTTON.submit.btn._lg._brand-1.effect._bounce-top(type="submit") Записаться на курс
