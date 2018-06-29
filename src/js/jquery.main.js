@@ -24,14 +24,33 @@ $(document).ready(function(){
     dotClass: 'owl-dot review__slider-dot'
 	});
 
-	$(".review__item-link").click(function(){
-		var toggle = $(this).parent().prev();
-		toggle.toggleClass('active');
 
-		if(toggle.hasClass('active')){
-			toggle.animate({height: toggle.get(0).scrollHeight}, 200);
+	function toggle(el, toggleEl, height){
+		var closeText = el.attr('data-close');
+		var openText = el.attr('data-open');
+		el.toggleClass('active');
+
+		if(el.hasClass('active')){
+			el.text(closeText);
 		}else{
-			toggle.animate({height:84}, 200);
+			el.text(openText);
 		}
+
+
+		toggleEl.toggleClass('active');
+
+		if(toggleEl.hasClass('active')){
+			toggleEl.animate({height: toggleEl.get(0).scrollHeight}, 200);
+		}else{
+			toggleEl.animate({height: height}, 200);
+		}
+	}
+
+	$(".review__item-link").click(function(){
+		toggle($(this), $(this).parent().prev(), 84);
+	});
+
+	$(".themes__body-button").click(function(){
+		toggle($(this), $(this).parent().prev(), 410);
 	});
 });	

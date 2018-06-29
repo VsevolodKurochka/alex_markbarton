@@ -8,11 +8,39 @@
 	&__title
 		color: $color-white
 
-	&__content
+	&__body
+		background-color: $color-white
 		margin-bottom: 30px
 
 		+min(sm)
 			margin-bottom: 45px
+
+		&-end
+			background-color: #f6f6f6
+			text-align: center
+			+padding-y(15px)
+
+		&-button
+			border: none
+			background-color: transparent
+			display: inline-block
+			+font('pb')
+			font-size: 17px
+			color: $color-brand-2
+			border-bottom: 1px solid $color-brand-2
+			outline: none
+
+			+transition()
+
+			&:hover
+				color: $color-brand-1
+				border-bottom-color: $color-brand-1
+
+	&__content
+
+		+min(sm)
+			height: 410px
+			overflow: hidden
 
 	&__part
 		padding: 30px 15px
