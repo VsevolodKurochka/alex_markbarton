@@ -14,19 +14,14 @@ $(document).ready(function(){
 	$('#review-slider').owlCarousel({
     loop: true,
     margin: 10,
-    nav: false,
     items: 1,
-    dots: false,
-    nav: true,
-    navText: ["", ""],
+    dots: true,
+    nav: false,
     autoplay: false,
     autoplayTimeout: 3000,
     navContainerClass: 'owl-nav review__nav',
-    responsive: {
-    	768: {
-    		items: 2
-    	}
-    }
+    dotsClass: 'owl-dots review__slider-dots',
+    dotClass: 'owl-dot review__slider-dot'
 	});
 
 	$(".review__item-link").click(function(){

@@ -95,3 +95,24 @@
 				margin-left: -2px
 				&:before
 					transform: scaleX(-1)
+
+	&__slider
+		
+		&-dots
+			margin-top: 30px
+			text-align: center
+
+		&-dot
+			display: inline-block
+			vertical-align: middle
+			+size(20px)
+			border: none
+			border-radius: 100%
+			background-color: $color-black
+			+transition
+
+			&.active
+				background-color: $color-brand-1
+
+			&:not(:last-child)
+				margin-right: 10px
