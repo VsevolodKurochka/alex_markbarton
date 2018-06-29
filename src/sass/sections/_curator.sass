@@ -23,9 +23,12 @@
 
 			&:before
 				content: ""
-				+absolute(null, null, -10px, -25px)
+				+absolute(null, null, -10px, -15px)
 				+size(50px)
 				border: 8px solid $color-brand-1
+
+				+min(sm)
+					left: -25px
 
 		&-image
 			height: 250px

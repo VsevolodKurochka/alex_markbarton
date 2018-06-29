@@ -28,25 +28,26 @@
 		
 		&:after,
 		&:before
-			content: ""
-			+absolute()
+			
 
 		&:after
+			content: ""
+			+absolute()
 			top: 30px
 			left: -30%
 			background-color: $color-white
 			+size(130%, 100%)
 			z-index: -1
-
-		&:before
-			bottom: 47%
-			left: 5%
-			+size(100%, 50%)
-			background-color: $color-brand-2
-			z-index: -2
-
-			+min(sm)
+		
+		+min(sm)
+			&:before
+				content: ""
+				+absolute()
 				bottom: -25%
+				left: 5%
+				+size(100%, 50%)
+				background-color: $color-brand-2
+				z-index: -2
 
 	&__item
 
