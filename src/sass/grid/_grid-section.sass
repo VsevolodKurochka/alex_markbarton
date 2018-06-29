@@ -1,25 +1,25 @@
-$section-title: ('default': 25px, 'sm': 35px, 'md': 40px, 'lg': 48px)
-$section-subtitle: ('default': 20px, 'sm': 22px, 'md': 24px, 'lg': 28px)
+$section-title: ('default': 25px, 'sm': 30px, 'md': 35px, 'lg': 43px)
+$section-subtitle: ('default': 20px, 'sm': 22px, 'md': 23px, 'lg': 26px)
 
 .section
 	+relative()
 	+margin-y(30px)
 
 	+min(sm)
-		+margin-y(50px)
+		+margin-y(45px)
 
 	+min(md)
-		+margin-y(75px)
+		+margin-y(60px)
 
 	&__header
 		text-align: center
 		margin-bottom: 30px
 
 		+min(sm)
-			margin-bottom: 60px
+			margin-bottom: 45px
 
 		+min(md)
-			margin-bottom: 70px
+			margin-bottom: 60px
 
 	@at-root
 		%title
