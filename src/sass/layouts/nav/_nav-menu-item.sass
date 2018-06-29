@@ -2,6 +2,7 @@
 	&__menu
 		&-item
 			display: block
+			+relative()
 
 			+transition()
 
@@ -10,7 +11,7 @@
 				position: relative
 				color: $color-white
 				text-decoration: none
-				font-size: 16px
+				font-size: 15px
 
 				&_default
 
@@ -18,7 +19,9 @@
 
 				&_custom
 					+font('pb')
-					font-size: 18px
+					font-size: 16px
+
+			
 
 
 
@@ -37,7 +40,16 @@
 					margin-right: 15px
 
 				a
-					padding-top: 7.5px
-					padding-bottom: 7.5px
 
 					+linkEffect3
+
+				&_default:nth-child(1) a
+					color: $color-brand-1
+
+				&_default:not(:last-child)
+					padding-right: 45px
+					&:before
+						content: ""
+						+absolute(9px, 0)
+						+size(25px, 1px)
+						background-color: $color-white
