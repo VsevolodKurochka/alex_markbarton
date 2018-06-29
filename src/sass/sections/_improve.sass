@@ -2,15 +2,10 @@
 
 	&__item
 
-		margin-bottom: 30px
-
-		+min(md)
-			margin-bottom: 45px
-
-		&:last-child
-			margin-bottom: 0
+		+offset()
 
 		&-image
+			max-height: 180px
 			margin-bottom: 20px
 
 		&-content
@@ -21,23 +16,19 @@
 
 				&:before
 					content: ""
-					+absolute(15px, null, null, 0)
+					+absolute(11px, null, null, 0)
 					+size(30px, 1px)
 					background-color: $color-brand-1
 
-			+min(md)
-				padding-left: 70px
-
-				&:before
-					width: 50px
-
 		&-title
 			margin-bottom: 10px
-			font-size: 22px
+			font-size: 20px
 			line-height: 1.1
 			+font('pb')
 
 		&-list
+
+			font-size: 16px
 
 			li
 				padding-left: 15px

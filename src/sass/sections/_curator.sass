@@ -19,33 +19,16 @@
 
 			+relative()
 			
-			margin-bottom: 40px
-			height: 200px
-
-			+min(sm)
-				height: 250px
-
-			+min(md)
-				height: 300px
-
-			+min(lg)
-				height: 350px
+			margin-bottom: 25px
 
 			&:before
 				content: ""
-				+absolute(null, null, -25px, -10px)
+				+absolute(null, null, -10px, -25px)
 				+size(50px)
-				border: 10px solid $color-brand-1
-
-				+min(sm)
-					bottom: -25px
-					left: -35px
-					+size(60px)
-					border-width: 10px
+				border: 8px solid $color-brand-1
 
 		&-image
-			+size(100%)
-			object-fit: cover
+			height: 250px
 
 		&-title
 			line-height: 1

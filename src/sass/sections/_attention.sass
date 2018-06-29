@@ -25,9 +25,17 @@
 			margin-bottom: 50px
 
 	&__price
-		margin-bottom: 30px
-		color: $color-brand-1
-		+font('pb')
+
+		&-old
+			text-decoration: line-through
+			margin-bottom: 5px
+			color: $color-white
+			opacity: 0.4
+
+		&-new
+			margin-bottom: 30px
+			color: $color-brand-1
+			+font('pb')
 
 	&__button-outer
 		+margin-y(30px)
