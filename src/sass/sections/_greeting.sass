@@ -7,7 +7,7 @@
 	color: $color-white
 	
 	+min(sm)
-		+padding-y(160px, 180px)
+		+padding-y(150px, 55px)
 
 	@at-root
 		%relative
@@ -33,7 +33,7 @@
 				background-color: transparentize($color-black, 0.3)
 
 		+min(sm)
-			+size(45%, 90%)
+			+size(45%, 85%)
 
 		img
 			object-fit: cover
@@ -45,6 +45,8 @@
 		font-size: 100px
 		line-height: 1
 		color: $color-brand-1
+
+		z-index: -1
 		@extend %db, %relative, %font-bold
 
 		&:before
@@ -58,7 +60,7 @@
 			font-size: 130px
 
 			&:before
-				top: -35px
+				top: -31px
 				+size(99px, 62px)
 
 		+min(md)
@@ -68,26 +70,24 @@
 				+size(110px, 69px)
 
 		+min(lg)
-			margin-bottom: -70px
-			font-size: 187px
+			margin-bottom: -55px
+			font-size: 146px
 
 			&:before
-				+size(126px, 78px)
+				+size(99px, 61px)
 
 	&__content
 
-		@extend %relative
-
-		left: 45px
+		margin-left: 45px
 
 		+min(sm)
-			left: 55px
+			margin-left: 55px
 		
 		+min(md)
-			left: 75px
+			margin-left: 75px
 
 		+min(lg)
-			left: 95px
+			margin-left: 70px
 
 
 	&__title
@@ -97,21 +97,21 @@
 		&-first
 			@extend %db, %font-bold
 			
-			font-size: 45px
+			font-size: 40px
 			color: $color-white
 
 			+min(sm)
-				font-size: 60px
+				font-size: 50px
 
 			+min(md)
-				font-size: 80px
+				font-size: 60px
 
 			+min(lg)
-				font-size: 93px
+				font-size: 73px
 
 		&-last
 			@extend %db
-			font-size: 17px
+			font-size: 15px
 			color: $color-brand-1
 			+font('l')
 
@@ -132,13 +132,13 @@
 			background-color: transparentize($color-white, 0.8)
 
 		+min(sm)
-			font-size: 30px
+			font-size: 27px
 
 		+min(md)
-			font-size: 35px
+			font-size: 30px
 
 		+min(lg)
-			font-size: 42px
+			font-size: 36px
 
 
 		&-highlight
@@ -178,15 +178,15 @@
 			font-size: 24px
 
 	&__course
-		max-width: 300px
+		max-width: 270px
 		color: $color-white
 
 		+max(sm)
 			margin-left: -45px
 
 		+min(md)
-			+absolute(null, 0, null, null)
-			max-width: 350px
+			+absolute(null, 0, 0, null)
+			min-width: 350px
 
 		@at-root
 			%bg
@@ -232,16 +232,13 @@
 
 					&-title
 						+font('pb')
-						font-size: 60px
+						font-size: 55px
 						line-height: 1
 
 					&-subtitle
-						font-size: 24px
+						font-size: 21px
 						line-height: 1
 
 	&__button-outer
 
 		margin-top: 30px
-
-		+min(sm)
-			margin-top: 50px
