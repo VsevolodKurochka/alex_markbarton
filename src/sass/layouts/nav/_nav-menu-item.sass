@@ -1,15 +1,26 @@
-+b('nav')
-	+e("menu")
-		+ee("item")
+.nav
+	&__menu
+		&-item
 			display: block
 
 			+transition()
 
-			a
+			&-link
 				display: block
 				position: relative
 				color: $color-white
 				text-decoration: none
+				font-size: 16px
+
+				&_default
+
+					text-transform: uppercase
+
+				&_custom
+					+font('pb')
+					font-size: 18px
+
+
 
 			+max(md)
 				margin-bottom: 10px

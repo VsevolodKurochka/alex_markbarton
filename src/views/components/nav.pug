@@ -2,13 +2,19 @@
 	+b.nav#js-navigation
 		+e.container.container
 			+e.row.row
-				+e.logo.col-7.col-md-3
+				+e.logo.col-7.col-md-2
 					+hamburger('2')
 					+e.logo-content
 						+e.logo-content-img(src="img/logo.png" alt="")
-				+e.NAV.menu.col-12.col-md-6#js-navigation-menu
-					for item in navigation
+				+e.menu.col-12.col-md-8#js-navigation-menu
+					ul
+						for item in navigation
+							+e.LI.menu-item
+								+e.A.menu-item-link._default(data-scroll href=item.link)=item.name
+					ul
 						+e.LI.menu-item
-							+e.A.menu-item-link(data-scroll href=item.link)=item.name
-				+e.addition.col-5.col-md-3#js-nav-addition
+							+e.A.menu-item-link._custom(href="tel: 8 985 415 44 61") 8 985 415 44 61
+						+e.LI.menu-item
+							+e.A.menu-item-link._custom(href="mailto: info@markbarton.ru") info@markbarton.ru
+				+e.addition.col-5.col-md-2#js-nav-addition
 					+e.BUTTON.addition-btn.btn(data-action="modal" data-open="#modal-form") Оставить заявку
