@@ -24,5 +24,5 @@ gulp.task('image', () => {
 
 // Task `image:watch`
 gulp.task('image:watch', () =>
-	gulp.watch(`${folders.src}/img/**/*`).on('change', gulp.series('image', reload))
+	gulp.watch(`${folders.src}/img/**/*`, gulp.series('image') )
 );

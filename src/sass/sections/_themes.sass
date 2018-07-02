@@ -47,7 +47,7 @@
 			overflow: hidden
 
 	&__part
-		padding: 30px 15px
+		padding: 30px 20px
 		flex-basis: 100%
 
 		+min(sm)
@@ -66,6 +66,19 @@
 				margin-bottom: 5px
 				padding: 2px 10px
 				font-size: 16px
+
+				&.marker
+					+relative()
+
+					&:before
+						content: '➤'
+						+absolute(3px, null, null, -17px)
+						font-size: 14px
+						+font('pb')
+						color: $color-brand-1
+
+						+min(sm)
+							left: -20px
 
 		&_1
 			background-color: $color-white

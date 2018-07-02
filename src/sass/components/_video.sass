@@ -19,8 +19,6 @@
 			object-fit: cover
 
 	&__button
-		+absolute(50%, null, null, 50%)
-		transform: translate(-50%, -50%)
 		background-color: transparent
 		border: none
 		outline: none
@@ -56,7 +54,18 @@
 
 			+transition()
 
-		&:hover &
+		&-outer
+
+			+absolute(50%, null, null, 50%)
+			transform: translate(-50%, -50%)
+
+			&-click
+				+absolute()
+				+size(100%)
+				z-index: 2
+				cursor: pointer
+
+		&-outer:hover &
 
 			&-circle
 				border-color: $color-brand-1
