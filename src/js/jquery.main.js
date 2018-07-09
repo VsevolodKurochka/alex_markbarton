@@ -19,6 +19,8 @@ $(document).ready(function(){
     nav: false,
     autoplay: false,
     autoplayTimeout: 3000,
+    autoHeight: true,
+    autoHeightClass: 'owl-height',
     navContainerClass: 'owl-nav review__nav',
     dotsClass: 'owl-dots review__slider-dots',
     dotClass: 'owl-dot review__slider-dot'
