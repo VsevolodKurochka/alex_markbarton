@@ -9,7 +9,7 @@
 		&:before
 			content: ""
 			+absolute(10px, null, null, -30%)
-			+size(125%, 30%)
+			+size(125%, 28%)
 			z-index: -1
 			background-color: $color-brand-3
 
@@ -21,8 +21,7 @@
 
 		text-align: center
 
-		&_vip
-			color: $color-white
+		
 
 		&-inner
 			z-index: 1
@@ -93,6 +92,10 @@
 				+min(lg)
 					font-size: 38px
 
+		&-warning
+			font-size: 16px
+			+margin-y(5px, 10px)
+
 		&-footer
 			margin-top: 40px
 			margin-bottom: -55px
@@ -104,13 +107,16 @@
 			+min(sm)
 				min-width: 60%
 
+		&_vip
+			color: $color-white
+
 		&_vip &
 			&-inner
 				background-color: $color-brand-2
 			&-list
 				+min(md)
-					margin-bottom: 30px
-					font-size: 19px
+					margin-bottom: 116px
+					font-size: 21px
 			&-title
 				display: inline-block
 				background-color: $color-white
